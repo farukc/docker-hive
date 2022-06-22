@@ -7,6 +7,12 @@ This deploys Hive and starts a hiveserver2 on port 10000.
 Metastore is running with a connection to postgresql database.
 The hive configuration is performed with HIVE_SITE_CONF_ variables (see hadoop-hive.env for an example).
 
+To build a specific Hive version (example 3.1.3) : 
+```
+    docker build -t bde202/hive:3.1.3 --build-arg HIVE_VERSION=3.1.3 . 
+```
+
+
 To run Hive with postgresql metastore:
 ```
     docker-compose up -d
